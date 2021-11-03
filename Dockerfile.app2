@@ -1,0 +1,6 @@
+FROM alpine
+RUN apk add nodejs && apk add curl && apk add npm
+COPY /app2 /app
+WORKDIR /app/
+RUN npm install mongodb
+CMD ["node", "app.js"]

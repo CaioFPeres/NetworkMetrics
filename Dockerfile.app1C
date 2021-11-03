@@ -1,0 +1,4 @@
+FROM mcr.microsoft.com/dotnet/sdk
+COPY /app1 /app
+WORKDIR /app/
+CMD ["./TransferirArquivos", "2", "teste.txt"]
